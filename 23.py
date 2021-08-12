@@ -15,7 +15,7 @@ second = 0
 large = 1
 for i in range(count, 1, -1):
     second = first
-    first = n % 10 ** i // 10 ** (i - 1)
+    first = n % 10 ** (i - 1) // 10 ** (i - 2)
     if first < second:
         large = 0
         break

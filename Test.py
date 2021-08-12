@@ -1,11 +1,18 @@
-a=13579
-count=5
+n = 123456
 
+count = 0
+n1 = n
+while n1 > 0:
+    n1 = n1 // 10
+    count = count + 1
 
-b1=a//10000
-print(b1)
-b2 = a%10000//1000
-print(b2)
-b3=a%1000//100
-print(b3)
+first = n // 10 ** (count-1)
+second = 0
+
+for i in range(count, 1, -1):
+    second = first
+    first = n % 10 ** (i-1) // 10 ** (i - 2)
+    #print('Second = ', second, 'i = ', i)
+    #print('First = ', first, 'i = ', i)
+
 
